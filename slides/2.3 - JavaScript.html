@@ -1,0 +1,105 @@
+<section data-auto-animate>
+  <h3>JavaScript</h3>
+  <ul style="font-size: 0.7em">
+    <li class="fragment">
+      Originally a simple scripting language
+      <ul>
+        <li class="fragment">Dynamic and interactive web pages</li>
+        <li class="fragment">
+          DOM API
+          <ul>
+            <li class="fragment"><em>Document Object Model</em></li>
+            <li class="fragment">Manipulate HTML document</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="fragment">
+      Has become so much more
+      <ul>
+        <li class="fragment">Web Storage API 🗄️</li>
+        <li class="fragment">Geolocation API 📍</li>
+        <li class="fragment">Service Worker API 👷</li>
+        <li class="fragment">Push API 🔔</li>
+      </ul>
+    </li>
+    <li class="fragment">
+      Standardized as <em>EcmaScript</em> (Ecma-262)
+      <ul>
+        <li class="fragment">Ensures compatibility between web browsers</li>
+        <li class="fragment">Avoids incorrect association with Java</li>
+        <li class="fragment">Everybody still calls it JavaScript</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section data-auto-animate>
+  <h3>JavaScript</h3>
+  <div class="split">
+    <ul>
+      <li>
+        Linked to HTML in two ways:
+        <ul>
+          <li class="fragment" data-fragment-index="1" data-cue-code-lines="7">
+            by reference:
+            <ul>
+              <li>
+                <code>src</code> attribute on <code>&lt;script&gt;</code> element
+              </li>
+            </ul>
+          </li>
+          <li class="fragment" data-cue-code-lines="9-13">
+            by value:
+            <ul>
+              <li>inline JS inside <code>&lt;script&gt;</code> element</li>
+              <li class="fragment" data-cue-code-lines="3-5">
+                inline JS inside event attribute on element
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="fragment" data-fragment-index="1">
+      <pre><code class="language-html" data-trim data-line-numbers>
+        &lt;html&gt;
+          &lt;body&gt;
+            <button onclick="onClick('button clicked')">
+              Click me
+            </button>
+
+            &lt;script src="./path/to/file.js"&gt;&lt;/script&gt;
+
+            &lt;script&gt;
+              function onClick(msg) {
+                alert('Pop-up message: ' + msg)
+              }
+            &lt;/script&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code></pre>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>JavaScript example</h4>
+  <pre style="font-size: 20px"><code data-trim data-line-numbers="|1-2|13|7,12|4-5|1-2">
+    var heading = document.getElementsByTagName('h1')[0];
+    var bulletPoints = document.getElementsByTagName('ul')[0].children;
+
+    modifyHeading(heading);
+    modifyBulletPoints(bulletPoints)
+
+    function modifyHeading(heading) {
+      heading.textContent = 'This is a modified heading';
+      heading.style = 'color: red';
+    }
+
+    function modifyBulletPoints(bulletPoints) {
+      for (var i = 0; i < bulletPoints.length; i++) {
+        bulletPoints[i].textContent += ' (modified)'
+      }
+    }
+  </code></pre>
+</section>

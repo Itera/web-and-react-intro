@@ -1,0 +1,40 @@
+<section>
+  <h4>Typing React components</h4>
+  <div class="split">
+    <div class="fragment">
+      <pre><code class="language-tsx" data-trim data-line-numbers="|3-5|7|">
+        <script type="text/template">
+          import React from 'react';
+
+          type ExampleProps = {
+            heading: string;
+          }
+
+          function Example(props: ExampleProps) {
+            return <h1>{props.heading}</h1>;
+          }
+        </script>
+      </code></pre>
+    </div>
+    <div class="fragment">
+      <pre><code class="language-tsx" data-trim data-line-numbers="|3-8|10|">
+        <script type="text/template">
+          import React, { Component } from 'react';
+
+          type ExampleProps = {
+            heading: string;
+          }
+
+          type ExampleState = {
+          }
+
+          class Example extends Component<ExampleProps, ExampleState> {
+            render() {
+              return <h1>{this.props.heading}</h1>;
+            }
+          }
+        </script>
+      </code></pre>
+    </div>
+  </div>
+</section>

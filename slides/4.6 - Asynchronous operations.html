@@ -1,0 +1,103 @@
+<section>
+  <h3>Asynchronous operations with React</h3>
+  <ul>
+    <li class="fragment">
+      Dynamic web apps usually need to fetch information from another source
+      (e.g. a Web API)
+      <ul>
+        <li class="fragment"><em>Async</em> operations avoid freezing the UI</li>
+      </ul>
+    </li>
+    <li class="fragment">
+      You decide which async mechanism to use
+      <ul>
+        <li class="fragment">e.g. callbacks, promises, or observables</li>
+        <li class="fragment">Your responsibility to wire-up logic correctly</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section data-auto-animate>
+  <h4>Asynchronous operations examples</h4>
+  <h5 class="fragment" data-fragment-index="1">Callback version</h5>
+  <div class="fragment" data-fragment-index="1">
+    <pre style="font-size: 17px" data-id="code"><code data-trim data-line-numbers="|2|7-13,17|8|9|10|15-17|">
+      <script type="text/template">
+        import React, { useEffect } from 'react';
+        import { getLoggedInUser, getUserPreferences } from './api';
+
+        function ColorButton() {
+          const [favoriteColor, setFavoriteColor] = useState(null);
+
+          const handleClick = () => {
+            getLoggedInUser((user) => {
+              getUserPreferences(user, ({ favoriteColor }) => {
+                setFavoriteColor(favoriteColor);
+              });
+            });
+          }
+
+          return favoriteColor
+            ? <p>Your favorite color is {favoriteColor}</p>
+            : <button onClick={handleClick}>Get color</button>;
+        }
+      </script>
+    </code></pre>
+  </div>
+</section>
+<section data-auto-animate>
+  <h4>Asynchronous operations examples</h4>
+  <h5>Promise version</h5>
+  <div>
+    <pre style="font-size: 17px" data-id="code"><code data-trim data-line-numbers="|8-13|8|9|10|11|"
+      <script type="text/template">
+        import React, { useEffect } from 'react';
+        import { getLoggedInUser, getUserPreferences } from './api';
+
+        function ColorButton() {
+          const [favoriteColor, setFavoriteColor] = useState(null);
+
+          const handleClick = () => {
+            getLoggedInUser()
+              .then((user) => getUserPreferences(user))
+              .then(({ favoriteColor }) => {
+                setFavoriteColor(favoriteColor);
+              })
+            });
+          }
+
+          return favoriteColor
+            ? <p>Your favorite color is {favoriteColor}</p>
+            : <button onClick={handleClick}>Get color</button>;
+        }
+      </script>
+    </code></pre>
+  </div>
+</section>
+<section data-auto-animate>
+  <h4>Asynchronous operations examples</h4>
+  <h5>Promise with <code>async-await</code> version</h5>
+  <div>
+    <pre style="font-size: 17px" data-id="code"><code data-trim data-line-numbers="|7-11|7|8|9|10|"
+      <script type="text/template">
+        import React, { useEffect } from 'react';
+        import { getLoggedInUser, getUserPreferences } from './api';
+
+        function ColorButton() {
+          const [favoriteColor, setFavoriteColor] = useState(null);
+
+          const handleClick = async () => {
+            const user = await getLoggedInUser();
+            const { favoriteColor } = await getUserPreferences(user);
+            setFavoriteColor(favoriteColor);
+          }
+
+          return favoriteColor
+            ? <p>Your favorite color is {favoriteColor}</p>
+            : <button onClick={handleClick}>Get color</button>;
+        }
+      </script>
+    </code></pre>
+  </div>
+</section>

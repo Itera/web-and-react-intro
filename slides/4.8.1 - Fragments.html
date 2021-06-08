@@ -1,0 +1,46 @@
+<section>
+  <h4>Fragments</h4>
+  <ul>
+    <li class="fragment">
+      Dummy containers
+      <ul>
+        <li class="fragment">Will be removed upon render</li>
+        <li class="fragment">Will not be included in the DOM</li>
+        <li class="fragment">Nice for layout styling</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section>
+  <h4>Fragment example</h4>
+  <div>
+    <pre><code data-trim data-line-numbers="|1|5-7">
+      <script type="text/template">
+        import React, { Fragment } from 'react';
+
+        function Example(props) {
+          return (
+            <Fragment>
+              {props.children}
+            </Fragment>
+          )
+        }
+      </script>
+    </code></pre>
+  </div>
+  <div class="fragment" style="margin-top: 24px">
+    <pre><code data-trim data-line-numbers="|1|5-7">
+      <script type="text/template">
+        import React from 'react';
+
+        function Example(props) {
+          return (
+            <>
+              {props.children}
+            </>
+          )
+        }
+      </script>
+    </code></pre>
+  </div>
+</section>

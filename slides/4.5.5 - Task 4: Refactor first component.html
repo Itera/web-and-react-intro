@@ -1,0 +1,78 @@
+<section>
+  <h4>Task 4: Refactor into two components</h4>
+  <ol style="font-size: 0.9em">
+    <li class="fragment">
+      Create a new directory in your project:
+      <code style="display: block">react-intro/src/components</code>
+    </li>
+    <li class="fragment">
+      In the directory, create a new file:
+      <code style="display: block">
+        react-intro/src/components/ColleagueTable.js
+      </code>
+    </li>
+    <li class="fragment">
+      In the file, define an empty <i>function</i> component named
+      <code>ColleagueTable</code>
+    </li>
+    <li class="fragment">
+      Move table from <code>App</code> to <code>ColleagueTable</code> component
+    </li>
+    <li class="fragment">
+      Import and use <code>ColleagueTable</code> component in
+      <code style="display: block">react-intro/src/App.js</code>
+    </li>
+    <li class="fragment">
+      The app should now look identical to how it was before 😎
+    </li>
+  </ol>
+</section>
+
+<section>
+  <h5>Nice to know</h5>
+  <ul>
+    <li>
+      Reusable components are typically placed into <code>src/components</code>
+      <ul>
+        <li>Any component may use a reusable component</li>
+        <li>Reusable components should not use non-reusable component</li>
+      </ul>
+    </li>
+    <li><code>.jsx</code> extension may be used for files containing JSX</li>
+    <li>
+      <code>.js(x)</code> extensions are not required in import paths
+      <ul>
+        <li>
+          If
+          <a href="https://webpack.js.org/configuration/resolve/#resolveextensions" rel="noreferrer" target="_blank">
+            webpack is configured to resolve the extensions
+          </a>
+        </li>
+        <li><code>create-react-app</code> automatically fixes this</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h5>Coming up next</h5>
+  <ul>
+    <li class="fragment">
+      To be honest...
+      <span class="fragment">
+        the <code>ColleagueTable</code> component is actually not that useful 😱
+      </span>
+      <ul>
+        <li class="fragment">
+          Who wants to show the exact same information in the exact same way
+          twice? 😅
+        </li>
+      </ul>
+    </li>
+    <li class="fragment">
+      A generic <code>Table</code> component that could render arbitrary tabular
+      data would be more handy 🤔
+    </li>
+    <li class="fragment">So let's do that❓</li>
+  </ul>
+</section>

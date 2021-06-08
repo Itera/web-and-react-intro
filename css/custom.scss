@@ -1,0 +1,74 @@
+::marker {
+  color: hsl(400, 55%, 70%);
+}
+
+:not(pre) > code {
+  color: hsl(400, 85%, 65%);
+  font-size: 0.9em;
+}
+
+table.highlight-first-column {
+  & td:not(:first-of-type) th:not(:first-of-type) {
+    color: #cbcbcb;
+  }
+}
+
+.party {
+  animation: 9s dance infinite, 4s breath infinite 1s;
+
+  @keyframes dance {
+    0% {
+      transform: rotate(5deg);
+    }
+
+    50% {
+      transform: rotate(-5deg);
+    }
+
+    100% {
+      transform: rotate(5deg);
+    }
+  }
+
+  @keyframes breath {
+    0% {
+      font-size: 1em;
+    }
+
+    50% {
+      font-size: 0.95em;
+    }
+
+    100% {
+      font-size: 1em;
+    }
+  }
+}
+
+.split {
+  display: flex;
+  font-size: 0.7em;
+  gap: 32px;
+
+  & pre {
+    font-size: 16px;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.info {
+  padding: 16px;
+  border: 1px solid white;
+  font-size: 0.6em;
+  text-align: left;
+
+  & p, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0.6em;
+    margin-bottom: 0.1em;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+<section>
+  <h3>HTML</h3>
+  <div class="split">
+    <ul>
+      <li class="fragment" data-fragment-index="1">
+        <em>Hyper-Text Markup Language</em>
+      </li>
+      <li class="fragment" data-fragment-index="2">
+        Variant of XML
+        <ul>
+          <li class="fragment" data-fragment-index="3">
+            <em>Elements</em>
+            <ul>
+              <li class="fragment" data-fragment-index="4">
+                Open and closing tags
+              </li>
+              <li class="fragment" data-fragment-index="5">Attributes</li>
+              <li class="fragment" data-fragment-index="6">Children</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="fragment" data-fragment-index="7">
+        HTML 5
+        <ul>
+          <li class="fragment" data-fragment-index="8">
+            <em>Living</em> standard
+          </li>
+          <li class="fragment" data-fragment-index="9">
+            <em>Semantic elements</em>
+            <ul>
+              <li class="fragment" data-fragment-index="10">
+                Prefer <code>section</code> over <code>div</code> where possible
+              </li>
+              <li class="fragment">Accessibility</li>
+            </ul>
+          </li>
+          <li class="fragment">Flexible structure</li>
+          <li class="fragment">Fails silently</li>
+        </ul>
+      </li>
+    </ul>
+    <div>
+      <div class="fragment" data-fragment-index="4">
+        <pre><code class="language-html" data-trim>
+          <script type="text/template">
+            <tag></tag>
+          </script>
+        </code></pre>
+      </div>
+      <div class="fragment" data-fragment-index="5" style="margin-top: 20px">
+        <pre><code class="language-html" data-trim>
+          <script type="text/template">
+            <tag attribute1="value1" attribute2="value2"></tag>
+
+            <tag attribute1="value1"
+                 attribute2="value2">
+            </tag>
+          </script>
+        </code></pre>
+      </div>
+      <div class="fragment" data-fragment-index="6" style="margin-top: 20px">
+        <pre><code class="language-html" data-trim>
+          <script type="text/template">
+            <tag>
+              <child></child>
+            </tag>
+          </script>
+        </code></pre>
+      </div>
+      <div class="fragment" data-fragment-index="10" style="margin-top: 32px">
+        <div>
+          <pre><code class="language-html" data-trim>
+            <script type="text/template">
+              <div>
+                <span id="heading">Newsfeed</span>
+              </div>
+            </script>
+          </code></pre>
+        </div>
+        <div style="align-self: center; font-size: 0.7em">vs.</div>
+        <div>
+          <pre><code class="language-html" data-trim>
+            <script type="text/template">
+              <section>
+                <h2>Newsfeed</h2>
+              </section>
+            </script>
+          </code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>HTML document example</h4>
+  <pre style="font-size: 19px"><code data-trim data-line-numbers="|2,4|5,16|2-4|3|5-16|6|7-10|11-15">
+    <script type="text/template">
+      <html>
+        <head>
+          <title>HTML Document | Web Intro</title>
+        </head>
+        <body>
+          <h1>This is a heading</h1>
+          <p>
+            This is a paragraph, followed by a
+            list of bullet points:
+          </p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </body>
+      </html>
+    </script>
+  </code></pre>
+</section>

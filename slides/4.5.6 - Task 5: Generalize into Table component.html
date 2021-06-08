@@ -1,0 +1,70 @@
+<section>
+  <h4>Task 5: Generalize table component</h4>
+  <ol>
+    <li class="fragment">
+      Rename <code>ColleagueTable</code> component to <code>Table</code>
+    </li>
+    <li class="fragment">
+      Change the component to expect two <em>props</em>:
+      <dl class="fragment">
+        <dt>headings</dt>
+        <dd>a list of table headings</dd>
+        <dt>entries</dt>
+        <dd>a list of table rows to render</dd>
+      </dl>
+    </li>
+    <li class="fragment">
+      Adjust the <code>Table</code> component accordingly! 😬
+    </li>
+    <li class="fragment">Finally, the app should still look the same 🙈</li>
+  </ol>
+</section>
+
+<section>
+  <h5>Nice to know</h5>
+  <ul>
+    <li>
+      The <code>props</code> parameter
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring"
+        rel="noreferrer" target="_blank">
+        object can be destructured
+      </a>
+      for easier access
+    </li>
+    <li>
+      The <code>prop-types</code> library can be used to add <em>runtime</em>
+      type-checks for props
+    </li>
+    <li>
+      The <code>Array.map</code> function is typically used for
+      <a href="https://reactjs.org/docs/lists-and-keys.html#rendering-multiple-components" rel="noreferrer"
+        target="_blank">
+        repeating React nodes based on elements from a list
+      </a>
+      <ul>
+        <li>Every React node must have a
+          <a href="https://reactjs.org/docs/lists-and-keys.html#keys" rel="noreferrer" target="_blank">
+            key prop
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h5>Coming up next</h5>
+  <ul style="font-size: 0.9em">
+    <li class="fragment">
+      Yay!
+      <ul>
+        <li class="fragment">Although the changes may not be visible</li>
+        <li class="fragment">
+          Us devs will always appreciate elegant solutions 🤓
+        </li>
+        <li class="fragment">Even if they may appear more complicated 😜</li>
+      </ul>
+    </li>
+    <li class="fragment">Next, we'll look at adding interactivity!</li>
+  </ul>
+</section>
