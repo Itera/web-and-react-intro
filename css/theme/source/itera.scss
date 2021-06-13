@@ -1,0 +1,64 @@
+/**
+ * Itera theme for reveal.js.
+ *
+ * Copyright (C) 2021 Itera Norge AS
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(./fonts/IBMPlexSans/IBMPlexSans.css);
+@import url(./fonts/NeueMachina/NeueMachina.css);
+
+
+// Colors
+$black: black;
+$red: rgb(255, 75, 51);
+$fuschia: rgb(175, 29, 255);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'IBM Plex Sans';
+$mainColor: black;
+$mainFontSize: 42px;
+$headingFont: 'Neue Machina';
+$headingColor: $red;
+$headingTextShadow: none;
+$backgroundColor: white;
+$linkColor: black;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $red;
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+// Override theme template
+
+.reveal {
+  ::marker {
+    color: $red;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  :not(pre) > code {
+    color: $fuschia;
+    font-size: 0.9em;
+  }
+
+}
