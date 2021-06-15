@@ -1,0 +1,7 @@
+@startuml
+hide empty members
+hide circle
+
+GrandParent *-- Parent: onTitleChange(new title)\nonContentChange(new content) <
+Parent *-- Child: onContentChange(new content) <
+@enduml
