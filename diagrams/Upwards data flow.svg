@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="262px" preserveAspectRatio="none" style="width:559px;height:262px;background:#FFFFFF;" version="1.1" viewBox="0 0 559 262" width="559px" zoomAndPan="magnify"><defs><filter height="300%" id="fvxc3aer58vgp" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[ad8f97a6de27c4a0faf7a09cd129c5e0]
+class GrandParent--><rect fill="#FEFECE" filter="url(#fvxc3aer58vgp)" height="24.1328" id="GrandParent" style="stroke:#A80036;stroke-width:1.5;" width="79" x="171.05" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="73" x="174.05" y="23.6016">GrandParent</text><!--MD5=[cf9bc73d4b319b8f5d50999aecc13d13]
+class Parent--><rect fill="#FEFECE" filter="url(#fvxc3aer58vgp)" height="24.1328" id="Parent" style="stroke:#A80036;stroke-width:1.5;" width="43" x="189.05" y="123"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="37" x="192.05" y="139.6016">Parent</text><!--MD5=[661c05259cf57e4b4baa54079a4420a8]
+class Child--><rect fill="#FEFECE" filter="url(#fvxc3aer58vgp)" height="24.1328" id="Child" style="stroke:#A80036;stroke-width:1.5;" width="35" x="193.05" y="224"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="29" x="196.05" y="240.6016">Child</text><!--MD5=[30a2ee01ba41df40e2c48b7491e50fa9]
+reverse link GrandParent to Parent--><path codeLine="4" d="M157.76,26.06 C114.89,32.2 59.36,43.34 45.55,61 C6,111.59 135.6,127.97 188.81,132.49 " fill="none" id="GrandParent-backto-Parent" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="170.88,24.28,164.398,21.1203,158.9883,25.8884,165.4703,29.0481,170.88,24.28" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="282" x="46.55" y="82.0684">props = { onTitleChange, onContentChange }</text><!--MD5=[30a2ee01ba41df40e2c48b7491e50fa9]
+reverse link GrandParent to Parent--><path codeLine="7" d="M263.32,23.66 C288.91,28.4 317.53,38.76 333.55,61 C341.87,72.54 341.87,81.46 333.55,93 C310.39,125.14 260.94,132.47 232.29,133.91 " fill="none" id="GrandParent-backto-Parent-1" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="250.29,21.65,255.6136,26.5141,262.1511,23.4707,256.8274,18.6067,250.29,21.65" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="153" x="369.55" y="74.5684">onTitleChange(new title)</text><polygon fill="#000000" points="346.9046,80.1528,341.6251,88.0634,347.2831,89.6558,346.9046,80.1528" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="198" x="353.55" y="89.8789">onContentChange(new content)</text><!--MD5=[698bd73ad581ce73a8c6f885ca2f3411]
+reverse link Parent to Child--><path codeLine="5" d="M175.9,137.19 C147.28,140.23 108.28,149.56 88.55,177 C60.9,215.47 152.85,229.34 192.87,233.48 " fill="none" id="Parent-backto-Child" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="188.98,136.15,182.6823,132.6373,177.0176,137.0996,183.3154,140.6123,188.98,136.15" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="94.4178,190.5794,95.7422,181.1615,89.9536,182.1817,94.4178,190.5794" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="183" x="102.55" y="190.5684">props = { onContentChange }</text><!--MD5=[698bd73ad581ce73a8c6f885ca2f3411]
+reverse link Parent to Child--><path codeLine="8" d="M245.08,144.54 C261.9,150.63 280.6,160.71 290.55,177 C307.28,204.37 256.88,222.7 228.5,230.6 " fill="none" id="Parent-backto-Child-1" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="232.19,140.47,236.7076,146.0906,243.6334,144.0823,239.1158,138.4617,232.19,140.47" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="299.4959,180.7456,294.8989,189.0713,300.6706,190.1833,299.4959,180.7456" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="198" x="307.55" y="190.5684">onContentChange(new content)</text><!--MD5=[653340ccc7783a13523d3636f9b757f4]
+@startuml
+hide empty members
+hide circle
+
+GrandParent *- - Parent: props = { onTitleChange, onContentChange }
+Parent *- - Child: props = { onContentChange } >
+
+GrandParent *- - Parent: onTitleChange(new title)\nonContentChange(new content) <
+Parent *- - Child: onContentChange(new content) <
+@enduml
+
+PlantUML version 1.2021.7(Sun May 23 14:40:07 CEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: NO
+--></g></svg>

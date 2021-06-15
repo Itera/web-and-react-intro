@@ -1,0 +1,7 @@
+@startuml
+hide empty members
+hide circle
+
+GrandParent *-- Parent: props = { title, content } >
+Parent *-- Child: props = { content } >
+@enduml
