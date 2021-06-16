@@ -211,7 +211,6 @@ gulp.task("css-custom", () =>
     .pipe(compileSass())
     .pipe(autoprefixer())
     .pipe(minify({ compatibility: "ie9" }))
-    .pipe(header(banner))
     .pipe(gulp.dest("./dist"))
 );
 
@@ -221,7 +220,7 @@ gulp.task("qunit", () => {
   let serverConfig = {
     root,
     port: 8009,
-    host: "0.0.0.0",
+    host: "localhost",
     name: "test-server",
   };
 
@@ -327,7 +326,7 @@ gulp.task("serve", () => {
   connect.server({
     root: root,
     port: port,
-    host: "0.0.0.0",
+    host: "localhost",
     livereload: true,
   });
 

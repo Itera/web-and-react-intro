@@ -9,3 +9,31 @@ Additionally, the course is also meant to give you an even briefer introduction
 to general web development and how we have arrived at the present situation
 regarding "Modern Web Development". The intention here is for you to be able to
 navigate through the quagmire that we call frontend.
+
+## Viewing the presentation
+
+### Install dependencies
+
+The presentation was made using [reveal.js](https://revealjs.com/). To install
+all of the NPM dependencies required to run the server necessary to view the
+presentation, run the following command:
+
+```
+npm ci
+```
+
+
+### Run server
+
+To run the server that allows you to view the presentation, run the following
+command:
+
+```
+npm start
+```
+
+
+### View presentation in web browser
+
+Open [http://localhost:8000](http://localhost:8000) in your browser to view the
+presentation.
