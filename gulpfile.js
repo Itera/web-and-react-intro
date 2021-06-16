@@ -211,7 +211,6 @@ gulp.task("css-custom", () =>
     .pipe(compileSass())
     .pipe(autoprefixer())
     .pipe(minify({ compatibility: "ie9" }))
-    .pipe(header(banner))
     .pipe(gulp.dest("./dist"))
 );
 
