@@ -358,7 +358,13 @@
 .reveal a {
   text-decoration: underline;
 }
+.reveal pre {
+  box-shadow: none;
+}
 .reveal :not(pre) > code {
   color: #af1dff;
   font-size: 0.9em;
+}
+.reveal .hljs.has-highlights tr:not(.highlight-line) {
+  opacity: 0.225;
 }

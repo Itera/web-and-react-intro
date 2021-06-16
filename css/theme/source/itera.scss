@@ -56,9 +56,18 @@ $heading4Size: 1.0em;
     text-decoration: underline;
   }
 
+  pre {
+    box-shadow: none;
+  }
+
   :not(pre) > code {
     color: $fuschia;
     font-size: 0.9em;
   }
 
+  .hljs.has-highlights {
+    tr:not(.highlight-line) {
+      opacity: 0.225;
+    }
+  }
 }
