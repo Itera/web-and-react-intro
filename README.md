@@ -8,8 +8,8 @@ about reading and writing React code in the wild 🔥.
 Additionally, the course is also meant to give you an even briefer introduction
 to general web development. You'll get to learn a bit about how we've arrived at
 the present situation regarding "Modern Web Development". The goal of this part
-is to allow you orient yourself and place your newfound knowledge into a bigger
-picture.
+is to allow you to orient yourself and place your newfound knowledge into a
+bigger picture.
 
 ## Prerequisites
 
