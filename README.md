@@ -10,6 +10,18 @@ to general web development and how we have arrived at the present situation
 regarding "Modern Web Development". The intention here is for you to be able to
 navigate through the quagmire that we call frontend.
 
+## Prerequisites
+
+The following list of programs are required for you to go through this course:
+- [NodeJS](https://nodejs.org/en/)
+- An IDE or code editor for web development (e.g. [Visual Studio Code](https://code.visualstudio.com/))
+
+Also, although not required, you should ideally also:
+- Be familiar with syntax of C-family languages (e.g. C, Java and JavaScript)
+- Know a bit about concepts from functional programming languages:
+  - [closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+  - [List map function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
 ## Viewing the presentation
 
 ### Install dependencies
