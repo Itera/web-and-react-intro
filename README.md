@@ -23,6 +23,31 @@ Also, although not required, you should ideally also:
   - [closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
   - [List map function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
+## Table of Contents
+
+- General Web Development
+  - What is the Web?
+  - What is "Modern Web Development"?
+  - How did "Early Web Development" look like?
+  - Brief journey from "early" to "modern" web development
+- React
+  - What is React?
+  - Why use React?
+  - How to use React?
+    - How to create a React project?
+    - Basic concepts
+      - Elements
+      - Components
+      - Hooks
+    - Asynchronous operations with React
+      - Callbacks
+      - Promises
+      - `async`-`await`
+  - Nice-to-know stuff
+    - Project structure
+    - Libraries
+
+
 ## Viewing the presentation
 
 ### Install dependencies
