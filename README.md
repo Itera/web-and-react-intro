@@ -2,13 +2,14 @@
 
 Throughout this course you'll get to learn a bit about basic React concepts and
 how you can wield them to create your own web app. The goal of this course is to
-give you a brief overview of React; enough for you to feel comfortable about
-reading and writing React code in the wild 🔥.
+give you a brief overview of React. Just enough for you to feel comfortable
+about reading and writing React code in the wild 🔥.
 
 Additionally, the course is also meant to give you an even briefer introduction
-to general web development and how we have arrived at the present situation
-regarding "Modern Web Development". The intention here is for you to be able to
-navigate through the quagmire that we call frontend.
+to general web development. You'll get to learn a bit about how we've arrived at
+the present situation regarding "Modern Web Development". The goal of this part
+is to allow you orient yourself and place your newfound knowledge into a bigger
+picture.
 
 ## Prerequisites
 
