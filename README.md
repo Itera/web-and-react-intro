@@ -11,6 +11,15 @@ the present situation regarding "Modern Web Development". The goal of this part
 is to allow you to orient yourself and place your newfound knowledge into a
 bigger picture.
 
+## Concrete Learnings
+
+After completing this course you'll be able to:
+- Creating and using React _components_
+- Handling user interaction with React
+- Fetching and handling data from API using React
+- Use relevant terms when talking about React
+- Find further reading material about React
+
 ## Prerequisites
 
 The following list of programs are required for you to go through this course:
