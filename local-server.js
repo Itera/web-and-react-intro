@@ -2,6 +2,8 @@ const fastify = require("fastify")({
   logger: true,
 });
 
+fastify.register(require("fastify-cors", { origin: true }));
+
 const colleagueList = [
   {
     id: 1,
