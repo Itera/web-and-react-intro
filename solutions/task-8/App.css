@@ -1,0 +1,36 @@
+main#task-8 {
+  margin: auto;
+  width: max-content;
+}
+
+#task-8 h1 {
+  text-align: center;
+}
+
+#task-8 table {
+  border-collapse: collapse;
+  border: 1px solid #cbcbcb;
+}
+
+#task-8 tbody > tr:nth-child(even) {
+  background-color: #ebebeb;
+}
+
+#task-8 tr:last-of-type {
+  border-bottom: 1px solid #cbcbcb;
+}
+
+#task-8 th, #task-8 td {
+  padding: 8px;
+  border-left: 1px solid #cbcbcb;
+  border-right: 1px solid #cbcbcb;
+}
+
+#task-8 fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+#task-8 fieldset > label:not(:first-of-type) {
+  margin-top: 4px;
+}

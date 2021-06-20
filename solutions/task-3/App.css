@@ -1,0 +1,27 @@
+main#task-3 {
+  margin: auto;
+  width: max-content;
+}
+
+#task-3 h1 {
+  text-align: center;
+}
+
+#task-3 table {
+  border-collapse: collapse;
+  border: 1px solid #cbcbcb;
+}
+
+#task-3 tbody > tr:nth-child(even) {
+  background-color: #ebebeb;
+}
+
+#task-3 tr:last-of-type {
+  border-bottom: 1px solid #cbcbcb;
+}
+
+#task-3 th, #task-3 td {
+  padding: 8px;
+  border-left: 1px solid #cbcbcb;
+  border-right: 1px solid #cbcbcb;
+}
