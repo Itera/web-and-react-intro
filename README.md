@@ -21,7 +21,7 @@ Also, although not required, you should ideally also:
 - Be familiar with syntax of C-family languages (e.g. C, Java and JavaScript)
 - Know a bit about concepts from functional programming languages:
   - [closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
-  - [List map function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+  - [List `map` function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ## Table of Contents
 
