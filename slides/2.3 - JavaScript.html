@@ -84,12 +84,14 @@
 
 <section>
   <h4>JavaScript example</h4>
-  <pre style="font-size: 20px"><code data-trim data-line-numbers="|1-2|13|7,12|4-5|1-2">
+  <pre style="font-size: 18px"><code data-trim data-line-numbers="|1-2|15|9,14|5,7|1-2|4|4-6|10-11">
     var heading = document.getElementsByTagName('h1')[0];
     var bulletPoints = document.getElementsByTagName('ul')[0].children;
 
-    modifyHeading(heading);
-    modifyBulletPoints(bulletPoints)
+    heading.addEventListener('hover', function (e) {
+      modifyHeading(e.target)
+    });
+    modifyBulletPoints(bulletPoints);
 
     function modifyHeading(heading) {
       heading.textContent = 'This is a modified heading';
