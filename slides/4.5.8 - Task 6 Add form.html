@@ -1,45 +1,55 @@
 <section>
 	<h4>Task 6: Adding a form</h4>
-	<article class="fragment info">
-		<h5>Motivation</h5>
-		<p style="display: flex; flex-direction: column">
-			<q>Wouldn't it be nice if you could input new colleagues to be listed?</q>
-			<span style="align-self: flex-end">- A wishful user</span>
-		</p>
+	<div class="split" style="font-size: 1em">
+		<article class="fragment info">
+			<h5>Motivation</h5>
+			<p style="display: flex; flex-direction: column">
+				<span>
+					<q>Wouldn't it be nice if you could input new colleagues to be listed?</q>
+					🥺
+				</span>
+				<span style="align-self: flex-end">- A wishful user</span>
+			</p>
 
-		<h5>Goal</h5>
-		<p>Implement a form that addresses the above problem!</p>
-	</article>
-</section>
-
-<section>
-	<h5>Nice to know</h5>
-	<ul>
-		<li class="fragment">
-			Relevant tools 🧰:
-			<ul class="fragment">
-				<li><code>useState</code> hook</li>
+			<h5>Goal</h5>
+			<p>Implement a form that addresses the above problem!</p>
+		</article>
+		<aside class="fragment info" style="font-size: 0.4em; max-width: 30%">
+			<h5>Tip #1</h5>
+			<p>You will need the <code>useState</code> hook.</p>
+			<h5>Tip #2</h5>
+			<p>Some relevant elements are:</p>
+			<ul style="column-count: 2; gap: 42px">
 				<li>
 					<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input" rel="noreferrer" target="_blank">
-						input element
-					</a>
-				</li>
-				<li>
-					<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button" rel="noreferrer" target="_blank">
-						button element
-					</a>
-				</li>
-				<li>
-					<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" rel="noreferrer" target="_blank">
-						form element
+						input
 					</a>
 				</li>
 				<li>
 					<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label" rel="noreferrer" target="_blank">
-						label element
+						label
+					</a>
+				</li>
+				<li>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" rel="noreferrer" target="_blank">
+						form
+					</a>
+				</li>
+				<li>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button" rel="noreferrer" target="_blank">
+						button
 					</a>
 				</li>
 			</ul>
-		</li>
-	</ul>
+			<h5>Tip #3</h5>
+			<p>
+				Call <code>preventDefault</code> on the <code>submit</code> event to
+				avoid unwanted refreshes, if you use the submit event.
+			</p>
+		</aside>
+	</div>
+</section>
+
+<section>
+	<h5>Share and discuss your solution with your colleagues</h5>
 </section>

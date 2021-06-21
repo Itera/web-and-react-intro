@@ -1,18 +1,31 @@
 <section>
 	<h4>Task 7: Adding a delete feature</h4>
-	<article class="fragment info">
-		<h5>Motivation</h5>
-		<p style="display: flex; flex-direction: column">
-			<span>
-				<q>Oh no! I accidentally included a typo and now there's no way to delete the entry</q>
-				😭
-			</span>
-			<span style="align-self: flex-end">- A panicking user</span>
-		</p>
+	<div class="split" style="font-size: 1em">
+		<article class="fragment info">
+			<h5>Motivation</h5>
+			<p style="display: flex; flex-direction: column">
+				<span>
+					<q>Oh no! I accidentally included a typo and now there's no way to delete the entry</q>
+					😭
+				</span>
+				<span style="align-self: flex-end">- A panicking user</span>
+			</p>
 
-		<h5>Goal</h5>
-		<p>Implement a mechanism that allows users to delete table entries.</p>
-	</article>
+			<h5>Goal</h5>
+			<p>Implement a mechanism that allows users to delete table entries.</p>
+		</article>
+		<aside class="fragment info" style="font-size: 0.4em; max-width: 30%">
+			<h5>Tip #1</h5>
+			<p>You <em>can</em> use row index to identify which row to delete.</p>
+			<h5>Tip #2</h5>
+			<p>
+				The function given to <code>Array.map</code> will receive the current
+				element's index as its 2nd parameter.
+			</p>
+			<h5>Tip #3</h5>
+			<p>React nodes, or JSX, are valid array elements and object values.</p>
+		</aside>
+	</div>
 </section>
 
 <section>
