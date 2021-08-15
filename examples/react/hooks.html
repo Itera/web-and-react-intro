@@ -1,0 +1,78 @@
+<html lang="no">
+  <head>
+    <title>ReactJS</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6/babel.min.js"
+    ></script>
+
+    <script type="text/babel">
+      function ExampleFC() {
+        const [count, setCount] = React.useState(0);
+
+        const handleClick = React.useCallback(() => {
+          setCount(count + 1);
+        }, [count, setCount]);
+
+        return (
+          <section>
+            <h2>Counter with Function Component</h2>
+            <p>You have clicked {count} times</p>
+            <button onClick={handleClick}>Click me</button>
+          </section>
+        );
+      }
+    </script>
+
+    <script type="text/babel">
+      class ExampleC extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { count: 0 };
+        }
+
+        handleClick = () => {
+          this.setState(({ count }) => ({ count: count + 1 }));
+        };
+
+        render() {
+          const { count } = this.state;
+          return (
+            <section>
+              <h2>Counter with Class Component</h2>
+              <p>You have clicked {count} times</p>
+              <button onClick={this.handleClick}>Click me</button>
+            </section>
+          );
+        }
+      }
+    </script>
+
+    <script type="text/babel">
+      function App() {
+        return (
+          <main>
+            <h1>Counters</h1>
+            <ExampleFC />
+            <ExampleC />
+          </main>
+        );
+      }
+      const root = document.querySelector('#root');
+      ReactDOM.render(<App />, root);
+    </script>
+  </body>
+</html>

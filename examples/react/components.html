@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <title>ReactJS</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6/babel.min.js"
+    ></script>
+
+    <script type="text/babel">
+      function HeadingFC(props) {
+        return <h1>{props.heading}</h1>;
+      }
+    </script>
+
+    <script type="text/babel">
+      class HeadingC extends React.Component {
+        componentDidMount() {
+          console.log('First render complete!');
+        }
+
+        componentDidUpdate() {
+          console.log('Consecutive render complete!');
+        }
+
+        componentWillUnmount() {
+          console.log('Bye bye!');
+        }
+
+        render() {
+          return <h1>{this.props.heading}</h1>;
+        }
+      }
+    </script>
+
+    <script type="text/babel">
+      function App() {
+        const [headerText, setHeaderText] = React.useState('This is a header');
+
+        function handleHeadingChange() {
+          setHeaderText('New heading text!');
+        }
+
+        return (
+          <React.Fragment>
+            <HeadingFC heading={headerText} />
+            <HeadingC heading={headerText} />
+            <button onClick={handleHeadingChange}>Change Heading</button>
+          </React.Fragment>
+        );
+      }
+      const root = document.querySelector('#root');
+      ReactDOM.render(<App />, root);
+    </script>
+  </body>
+</html>
