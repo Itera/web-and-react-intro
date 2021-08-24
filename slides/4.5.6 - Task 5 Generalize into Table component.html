@@ -13,7 +13,8 @@
         </ul>
       </li>
       <li class="fragment">
-        Adjust the <code>List</code> component accordingly! 😬
+        Adjust both <code>List</code> and <code>App</code> components
+        accordingly! 😬
       </li>
       <li class="fragment">Finally, the app should still look the same 🙈</li>
     </ol>
@@ -21,9 +22,23 @@
       <aside class="info">
         <h5>Tip #1</h5>
         <p>
-          Use the <code>Array.map</code> function to
+          Use the
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+            rel="noreferrer" target="_blank">
+            map
+          </a>
+          function to
           <a href="https://reactjs.org/docs/lists-and-keys.html#rendering-multiple-components" rel="noreferrer"
             target="_blank">render repeating React nodes</a>.
+        </p>
+        <h5>Tip #2</h5>
+        <p>
+          Repeating React nodes <em>should</em> have a
+          <span style="display: block">
+            <a href="https://reactjs.org/docs/lists-and-keys.html#keys" rel="noreferrer" target="_blank">
+              <em>key</em> prop
+            </a>
+          </span>
         </p>
       </aside>
     </div>
@@ -32,7 +47,7 @@
 
 <section>
   <h5>Nice to know</h5>
-  <ul style="font-size: 0.9em">
+  <ul>
     <li class="fragment">
       The <code>props</code> parameter
       <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring"
@@ -46,7 +61,7 @@
       type-checks for props
     </li>
     <li class="fragment">
-      Helpful debugging tools
+      Helpful debugging tools:
       <ul>
         <li class="fragment">
           <a href="https://addons.mozilla.org/en-US/firefox/addon/react-devtools/" rel="noreferrer" target="_blank">
@@ -55,26 +70,14 @@
           browser extension
         </li>
         <li class="fragment">
-          In-built browser dev tools (e.g.
-          <a href="https://blog.openreplay.com/how-to-debug-reactjs-with-chrome-devtools" rel="noreferrer"
-            target="_blank">
-            Chrome Dev Tools
-          </a>
-          )
-        </li>
-      </ul>
-    </li>
-    <li class="fragment">
-      The <code>Array.map</code> function is typically used for
-      <a href="https://reactjs.org/docs/lists-and-keys.html#rendering-multiple-components" rel="noreferrer"
-        target="_blank">
-        repeating React nodes based on elements from a list
-      </a>
-      <ul>
-        <li class="fragment">Every React node must have a
-          <a href="https://reactjs.org/docs/lists-and-keys.html#keys" rel="noreferrer" target="_blank">
-            key prop
-          </a>
+          In-built browser dev tools
+          <div>(e.g.
+            <a href="https://blog.openreplay.com/how-to-debug-reactjs-with-chrome-devtools" rel="noreferrer"
+              target="_blank">
+              Chrome Dev Tools
+            </a>
+            )
+          </div>
         </li>
       </ul>
     </li>
@@ -85,9 +88,11 @@
   <h5>Coming up next</h5>
   <ul style="font-size: 0.9em">
     <li class="fragment">
-      Yay!
+      Finally a reusable list component!
       <ul>
-        <li class="fragment">Although the changes may not be visible</li>
+        <li class="fragment">
+          Congratulations on over-engineering your first component 🤣
+        </li>
         <li class="fragment">
           Us devs will always appreciate elegant solutions 🤓
         </li>
