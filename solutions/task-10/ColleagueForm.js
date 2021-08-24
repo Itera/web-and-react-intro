@@ -3,27 +3,18 @@ import TextField from "./components/TextField";
 
 function ColleagueForm({ onAdd, onUpdate, editing }) {
   const [name, setName] = useState("");
-  const [background, setBackground] = useState("");
-  const [homeTown, setHomeTown] = useState("");
 
   const resetForm = () => {
     setName("");
-    setBackground("");
-    setHomeTown("");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const colleague = {
-      Name: name,
-      Background: background,
-      "Home Town": homeTown,
-    };
     if (editing == null) {
-      onAdd(colleague);
+      onAdd(name);
     } else {
-      onUpdate(colleague);
+      onUpdate(name);
     }
 
     resetForm();
@@ -31,9 +22,7 @@ function ColleagueForm({ onAdd, onUpdate, editing }) {
 
   useEffect(() => {
     if (editing != null) {
-      setName(editing.Name || "");
-      setBackground(editing.Background || "");
-      setHomeTown(editing["Home Town"] || "");
+      setName(editing || "");
     }
   }, [editing]);
 
@@ -42,19 +31,7 @@ function ColleagueForm({ onAdd, onUpdate, editing }) {
       <fieldset>
         <legend>New Colleague</legend>
         <TextField id="name" label="Name" value={name} onChange={setName} />
-        <TextField
-          id="background"
-          label="Background"
-          value={background}
-          onChange={setBackground}
-        />
-        <TextField
-          id="homeTown"
-          label="Home Town"
-          value={homeTown}
-          onChange={setHomeTown}
-        />
-        <button type="submit" style={{ marginTop: 8 }}>
+        <button type="submit" style={{ marginTop: 8 }} disabled={!name}>
           {editing == null ? "Add" : "Update"}
         </button>
       </fieldset>

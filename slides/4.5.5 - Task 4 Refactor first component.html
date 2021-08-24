@@ -1,6 +1,6 @@
 <section>
   <h4>Task 4: Refactor into two components</h4>
-  <ol style="font-size: 0.9em">
+  <ol style="font-size: 0.8em">
     <li class="fragment">
       Create a new directory in your project:
       <code style="display: block">react-intro/src/components</code>
@@ -8,19 +8,24 @@
     <li class="fragment">
       In the directory, create a new file:
       <code style="display: block">
-        react-intro/src/components/ColleagueTable.js
+        react-intro/src/components/ColleagueList.js
       </code>
     </li>
     <li class="fragment">
-      In the file, define an empty <i>function</i> component named
-      <code>ColleagueTable</code>
+      In the file, define a <i>function</i> component named
+      <code>ColleagueList</code>
     </li>
     <li class="fragment">
-      Move table from <code>App</code> to <code>ColleagueTable</code> component
+      Copy-and-paste the hard-coded list from <code>App</code> into
+      <code>ColleagueList</code>
     </li>
     <li class="fragment">
-      Import and use <code>ColleagueTable</code> component in
+      Import <code>ColleagueList</code> into:
       <code style="display: block">react-intro/src/App.js</code>
+    </li>
+    <li class="fragment">
+      Replace the hard-coded list in <code>App</code> with an instance of
+      <code>ColleagueList</code>
     </li>
     <li class="fragment">
       The app should now look identical to how it was before 😎
@@ -60,7 +65,7 @@
     <li class="fragment">
       To be honest...
       <span class="fragment">
-        the <code>ColleagueTable</code> component is actually not that useful 😱
+        the <code>ColleagueList</code> component is actually not that useful 😱
       </span>
       <ul>
         <li class="fragment">
@@ -70,8 +75,8 @@
       </ul>
     </li>
     <li class="fragment">
-      A generic <code>Table</code> component that could render arbitrary tabular
-      data would be more handy 🤔
+      A generic <code>List</code> component that renders arbitrary collections
+      of data would be more handy 🤔
     </li>
     <li class="fragment">
       So let's do that❓

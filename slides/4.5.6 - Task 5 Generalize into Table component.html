@@ -1,21 +1,19 @@
 <section>
-  <h4>Task 5: Generalize table component</h4>
+  <h4>Task 5: Generalize list component</h4>
   <div class="split">
     <ol>
       <li class="fragment">
-        Rename <code>ColleagueTable</code> component to <code>Table</code>
+        Rename <code>ColleagueList</code> component to just <code>List</code>
       </li>
       <li class="fragment">
-        Change the component to expect two <em>props</em>:
-        <dl class="fragment" style="display: block">
-          <dt>headings</dt>
-          <dd>a list of table headings</dd>
-          <dt>entries</dt>
-          <dd>a list of table rows to render</dd>
-        </dl>
+        Change <code>List</code> to expect a <em>single</em> prop
+        <code>entries</code>:
+        <ul>
+          <li>a list of items to render</li>
+        </ul>
       </li>
       <li class="fragment">
-        Adjust the <code>Table</code> component accordingly! 😬
+        Adjust the <code>List</code> component accordingly! 😬
       </li>
       <li class="fragment">Finally, the app should still look the same 🙈</li>
     </ol>
@@ -26,12 +24,6 @@
           Use the <code>Array.map</code> function to
           <a href="https://reactjs.org/docs/lists-and-keys.html#rendering-multiple-components" rel="noreferrer"
             target="_blank">render repeating React nodes</a>.
-        </p>
-        <h5>Tip #2</h5>
-        <p>
-          Render rows by using values from the <code>headings</code> array to
-          extract values from colleague objects in the <code>entries</code>
-          array.
         </p>
       </aside>
     </div>

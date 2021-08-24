@@ -7,21 +7,16 @@ h1 {
   text-align: center;
 }
 
-table {
-  border-collapse: collapse;
+ul {
   border: 1px solid #cbcbcb;
+  list-style-type: none;
+  padding: 0;
 }
 
-tbody > tr:nth-child(even) {
-  background-color: #ebebeb;
+li {
+  padding: 12px;
 }
 
-tr:last-of-type {
-  border-bottom: 1px solid #cbcbcb;
-}
-
-th, td {
-  padding: 8px;
-  border-left: 1px solid #cbcbcb;
-  border-right: 1px solid #cbcbcb;
+ul > li:nth-child(even) {
+  background-color: #e6e6e6;
 }

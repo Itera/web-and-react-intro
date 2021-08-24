@@ -1,18 +1,13 @@
-import ColleagueTable from "./components/Table";
+import List from "./components/List";
 import "./App.css";
+
+const COLLEAGUES = ["Tin Anh Nguyen", "Thanh Son Vo", "Didrik Fleischer"];
 
 function App() {
   return (
     <main id="task-5">
       <h1>My Colleagues</h1>
-      <ColleagueTable
-        headings={["Name", "Background", "Home Town"]}
-        entries={[
-          { Name: "Tin Anh Nguyen" },
-          { Name: "Thanh Son Vo" },
-          { Name: "Didrik Fleischer" },
-        ]}
-      />
+      <List entries={COLLEAGUES} />
     </main>
   );
 }

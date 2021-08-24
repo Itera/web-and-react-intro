@@ -1,7 +1,7 @@
 export async function getColleagues() {
   const res = await fetch("http://localhost:4000/colleagues");
   const colleagues = await res.json();
-  return colleagues.map(mapFromDto);
+  return colleagues;
 }
 
 export function addColleague(colleague) {
@@ -10,40 +10,22 @@ export function addColleague(colleague) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(mapToDto(colleague)),
+    body: JSON.stringify(colleague),
   });
 }
 
 export function deleteColleague(colleague) {
-  return fetch(`http://localhost:4000/colleagues/${colleague.Id}`, {
+  return fetch(`http://localhost:4000/colleagues/${colleague.id}`, {
     method: "DELETE",
   });
 }
 
 export function updateColleague(colleague) {
-  return fetch(`http://localhost:4000/colleagues/${colleague.Id}`, {
+  return fetch(`http://localhost:4000/colleagues/${colleague.id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(mapToDto(colleague)),
+    body: JSON.stringify(colleague),
   });
-}
-
-function mapFromDto({ id, name, background, homeTown }) {
-  return {
-    Id: id,
-    Name: name,
-    Background: background,
-    "Home Town": homeTown,
-  };
-}
-
-function mapToDto(colleague) {
-  return {
-    id: colleague.Id,
-    name: colleague.Name,
-    background: colleague.Background,
-    homeTown: colleague["Home Town"],
-  };
 }

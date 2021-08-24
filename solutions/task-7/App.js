@@ -1,20 +1,24 @@
 import { useState } from "react";
 
-import Table from "./components/Table";
+import List from "./components/List";
 import ColleagueForm from "./ColleagueForm";
 import "./App.css";
 
-function App() {
-  const [colleagues, setColleagues] = useState([
-    { Name: "Tin Anh Nguyen" },
-    { Name: "Thanh Son Vo" },
-    { Name: "Didrik Fleischer" },
-  ]);
+const INITIAL_COLLEAGUES = [
+  "Tin Anh Nguyen",
+  "Thanh Son Vo",
+  "Didrik Fleischer",
+];
 
-  const entries = colleagues.map((colleague, index) => ({
-    ...colleague,
-    Delete: <button onClick={() => handleDelete(index)}>Delete</button>,
-  }));
+function App() {
+  const [colleagues, setColleagues] = useState(INITIAL_COLLEAGUES);
+
+  const entries = colleagues.map((colleague, index) => (
+    <div key={index} style={{ display: "flex", gap: 8 }}>
+      <button onClick={() => handleDelete(index)}>Delete</button>
+      {colleague}
+    </div>
+  ));
 
   const handleAdd = (newColleague) => {
     setColleagues([...colleagues, newColleague]);
@@ -28,10 +32,7 @@ function App() {
     <main id="task-7">
       <h1>My Colleagues</h1>
       <ColleagueForm onAdd={handleAdd} />
-      <Table
-        headings={["Name", "Background", "Home Town", "Delete"]}
-        entries={entries}
-      />
+      <List entries={entries} />
     </main>
   );
 }
