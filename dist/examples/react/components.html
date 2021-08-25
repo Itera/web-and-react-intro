@@ -48,19 +48,31 @@
     <script type="text/babel">
       function App() {
         const [headerText, setHeaderText] = React.useState('This is a header');
+        const [isUnmounted, setIsUnmounted] = React.useState(false);
 
         function handleHeadingChange() {
           setHeaderText('New heading text!');
         }
 
+        function handleUnmount() {
+          setIsUnmounted(true);
+        }
+
         return (
           <React.Fragment>
             <HeadingFC heading={headerText} />
-            <HeadingC heading={headerText} />
+            {!isUnmounted && <HeadingC heading={headerText} />}
             <button onClick={handleHeadingChange}>Change Heading</button>
+            <button onClick={handleUnmount} disabled={isUnmounted} style={{
+              display: 'block',
+              marginTop: 8
+            }}>
+              Unmount
+            </button>
           </React.Fragment>
         );
       }
+
       const root = document.querySelector('#root');
       ReactDOM.render(<App />, root);
     </script>

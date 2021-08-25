@@ -4,8 +4,5 @@ html {
 
 h1 {
   font-size: 4rem;
-}
-
-p {
-  text-shadow: 4px 4px 4px blue;
+  text-shadow: 1px 1px 1px blue;
 }
