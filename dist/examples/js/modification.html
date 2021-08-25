@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>HTML Document | Web Intro</title>
+  </head>
+  <body>
+    <h1>This is a heading</h1>
+    <p>
+      This is a paragraph, followed by a
+      list of bullet points:
+    </p>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+    <button onclick="modify()">Modify!</button>
+  </body>
+  <script>
+    function modify() {
+      var heading = document.getElementsByTagName('h1')[0];
+      var bulletPoints = document.getElementsByTagName('ul')[0].children;
+
+      heading.addEventListener('mouseover', function (e) {
+        modifyHeading(e.target)
+      });
+
+      modifyBulletPoints(bulletPoints);
+
+      function modifyHeading(heading) {
+        heading.textContent = 'This is a modified heading';
+        heading.style = 'color: red';
+      }
+
+      function modifyBulletPoints(bulletPoints) {
+        for (var i = 0; i < bulletPoints.length; i++) {
+          bulletPoints[i].textContent += ' (modified)'
+        }
+      }
+    }
+  </script>
+</html>
