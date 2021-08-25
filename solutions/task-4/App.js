@@ -1,4 +1,4 @@
-import ColleagueTable from "./components/ColleagueTable";
+import ColleagueTable from "./components/ColleagueList";
 import "./App.css";
 
 function App() {

@@ -1,15 +1,17 @@
 import { useState } from "react";
 
-import Table from "./components/Table";
+import List from "./components/List";
 import ColleagueForm from "./ColleagueForm";
 import "./App.css";
 
+const INITIAL_COLLEAGUES = [
+  "Tin Anh Nguyen",
+  "Thanh Son Vo",
+  "Didrik Fleischer",
+];
+
 function App() {
-  const [colleagues, setColleagues] = useState([
-    { Name: "Tin Anh Nguyen" },
-    { Name: "Thanh Son Vo" },
-    { Name: "Didrik Fleischer" },
-  ]);
+  const [colleagues, setColleagues] = useState(INITIAL_COLLEAGUES);
 
   const handleAdd = (newColleague) => {
     setColleagues([...colleagues, newColleague]);
@@ -19,10 +21,7 @@ function App() {
     <main id="task-6">
       <h1>My Colleagues</h1>
       <ColleagueForm onAdd={handleAdd} />
-      <Table
-        headings={["Name", "Background", "Home Town"]}
-        entries={colleagues}
-      />
+      <List entries={colleagues} />
     </main>
   );
 }

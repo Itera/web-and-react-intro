@@ -7,24 +7,20 @@ main#task-8 {
   text-align: center;
 }
 
-#task-8 table {
-  border-collapse: collapse;
+#task-8 ul {
   border: 1px solid #cbcbcb;
+  list-style-type: none;
+  padding: 0;
 }
 
-#task-8 tbody > tr:nth-child(even) {
-  background-color: #ebebeb;
+#task-8 li {
+  padding: 12px;
 }
 
-#task-8 tr:last-of-type {
-  border-bottom: 1px solid #cbcbcb;
+#task-8 ul > li:nth-child(even) {
+  background-color: #e8e8e8;
 }
 
-#task-8 th, #task-8 td {
-  padding: 8px;
-  border-left: 1px solid #cbcbcb;
-  border-right: 1px solid #cbcbcb;
-}
 
 #task-8 fieldset {
   display: flex;

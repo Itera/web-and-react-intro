@@ -1,32 +1,30 @@
 import { useEffect, useState } from "react";
 
-import Table from "./components/Table";
+import * as api from "./api/colleagues";
+import List from "./components/List";
 import ColleagueForm from "./ColleagueForm";
 import "./App.css";
-import * as api from "./api/colleagues";
 
 function App() {
   const [colleagues, setColleagues] = useState([]);
-  const [editing, setEditing] = useState(null);
+  const [editIndex, setEditIndex] = useState(null);
 
-  const entries = colleagues.map((colleague, index) => ({
-    ...colleague,
-    Controls: (
-      <div style={{ display: "flex", gap: 4 }}>
-        <button onClick={() => handleEdit(index)}>Edit</button>
-        <button onClick={() => handleDelete(index)} disabled={editing}>
-          Delete
-        </button>
-      </div>
-    ),
-  }));
+  const entries = colleagues.map((colleague, index) => (
+    <div key={index} style={{ display: "flex", gap: 8 }}>
+      <button onClick={() => handleDelete(index)} disabled={editIndex != null}>
+        Delete
+      </button>
+      <button onClick={() => handleEdit(index)}>Edit</button>
+      {colleague.name}
+    </div>
+  ));
 
   const updateColleagues = () => {
     return api.getColleagues().then(setColleagues);
   };
 
   const handleAdd = (newColleague) => {
-    api.addColleague(newColleague).then(() => updateColleagues());
+    api.addColleague({ name: newColleague }).then(() => updateColleagues());
   };
 
   const handleDelete = (index) => {
@@ -34,17 +32,18 @@ function App() {
   };
 
   const handleUpdate = (updatedColleague) => {
-    const oldColleague = colleagues.find(({ Id }) => Id === editing.Id);
+    const oldColleague = colleagues.find((_, i) => i === editIndex);
+    const newColleague = { name: updatedColleague };
     if (oldColleague) {
       api
-        .updateColleague({ ...oldColleague, ...updatedColleague })
-        .then(() => updateColleagues())
-        .then(() => setEditing(null));
+        .updateColleague({ ...oldColleague, ...newColleague })
+        .then(() => updateColleagues());
     }
+    setEditIndex(null);
   };
 
   const handleEdit = (index) => {
-    setEditing(colleagues[index]);
+    setEditIndex(index);
   };
 
   useEffect(() => {
@@ -52,17 +51,14 @@ function App() {
   }, []);
 
   return (
-    <main id="task-8">
+    <main id="task-10">
       <h1>My Colleagues</h1>
       <ColleagueForm
         onAdd={handleAdd}
         onUpdate={handleUpdate}
-        editing={editing}
+        editing={editIndex != null ? colleagues[editIndex].name : undefined}
       />
-      <Table
-        headings={["Name", "Background", "Home Town", "Controls"]}
-        entries={entries}
-      />
+      <List entries={entries} />
     </main>
   );
 }
