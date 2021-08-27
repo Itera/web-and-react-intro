@@ -37,7 +37,7 @@ fastify.get("/colleagues/:id", (req, res) => {
 });
 
 fastify.post("/colleagues", (req, res) => {
-  const colleague = req.body;
+  const colleague = JSON.parse(req.body);
 
   if (!colleague.name) {
     res.status(400).send("Missing required 'name' property");
@@ -57,7 +57,7 @@ fastify.put("/colleagues/:id", (req, res) => {
     return;
   }
 
-  const colleague = req.body;
+  const colleague = JSON.parse(req.body);
   colleagueList[colleagueIndex] = { ...colleague, id };
   res.send(colleague);
 });
