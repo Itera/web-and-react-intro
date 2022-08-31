@@ -19,13 +19,8 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
-      - name: Build diagrams
-        uses: grassedge/generate-plantuml-action@v1.5
-        with:
-          path: ./src/diagrams/*.puml
-          message: "Render PlantUML diagrams"
-      - name: Build slide show
-        run: npm run build:slideshow
+      - name: Build
+        run: npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

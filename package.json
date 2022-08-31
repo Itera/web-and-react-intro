@@ -5,10 +5,10 @@
   "homepage": "https://github.com/Itera/web-and-react-intro",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --exec 'parcel ./src/index.html' --watch ./src --watch ./static --ext js,html,scss",
-    "build": "npm run build:diagrams && npm run build:slideshow",
-    "build:diagrams": "plantuml ./src/diagrams/*.puml -tsvg -o ../../static/img",
-    "build:slideshow": "parcel build ./src/index.html --public-url .",
+    "start": "nodemon --exec 'npm run start:nowatch' --watch ./src --watch ./static --ext js,html,scss",
+    "start:nowatch": "parcel ./src/index.html",
+    "gen:diagrams": "rm -rf ./static/img && plantuml ./src/diagrams/*.puml -tsvg -o ../../static/img",
+    "build": "parcel build ./src/index.html --public-url .",
     "server": "node ./local-server.js"
   },
   "contributors": [
