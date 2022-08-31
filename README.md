@@ -59,28 +59,18 @@ Also, although not required, you should ideally also be familiar with:
 
 ## Viewing the presentation
 
-### Install dependencies
+### Live
 
-The presentation was made using [reveal.js](https://revealjs.com/). To install
-all of the NPM dependencies required to run the server necessary to view the
-presentation, run the following command:
+View the presentation live at https://itera.github.io/web-and-react-intro/.
+
+### Locally
+
+Clone this repository and run the following commands:
 
 ```
 npm ci
-```
-
-
-### Run server
-
-To run the server that allows you to view the presentation, run the following
-command:
-
-```
 npm start
 ```
 
-
-### View presentation in web browser
-
-Open [http://localhost:8000](http://localhost:8000) in your browser to view the
-presentation.
+Finally, navigate to the following URL in your browser to see the presentation:
+http://localhost:1234.
