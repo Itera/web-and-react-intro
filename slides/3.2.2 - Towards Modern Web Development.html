@@ -1,0 +1,251 @@
+<section data-auto-animate>
+  <h4>Towards Modern Web Development</h4>
+  <ul>
+    <li class="fragment">Frontend frameworks
+      <ul>
+        <li class="fragment">Dojo</li>
+        <li class="fragment">Backbone</li>
+        <li class="fragment">Knockout</li>
+        <li class="fragment">AngularJS</li>
+      </ul>
+    </li>
+    <li class="fragment">
+      Bower
+      <ul>
+        <li class="fragment">Client-side dependency manager</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section data-auto-animate>
+  <h4>Towards Modern Web Development</h4>
+  <ul>
+    <li>
+      NodeJS
+      <ul>
+        <li class="fragment">JavaScript Engine</li>
+        <li class="fragment">Huge perfomance gains</li>
+      </ul>
+    </li>
+    <li class="fragment">
+      Server frameworks
+      <ul>
+        <li class="fragment">Same language on frontend and backend</li>
+        <li class="fragment">Birth of the <em>"fullstack developer"</em></li>
+      </ul>
+    </li>
+    <li class="fragment">
+      Frontend frameworks
+      <ul>
+        <li class="fragment">React</li>
+        <li class="fragment">Vue</li>
+        <li class="fragment">Angular</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section data-auto-animate>
+  <h4>Towards Modern Web Development</h4>
+  <ul>
+    <li>
+      Gulp
+      <ul>
+        <li class="fragment">Build system</li>
+      </ul>
+    </li>
+    <li class="fragment">
+      Webpack
+      <ul>
+        <li class="fragment">Module bundler</li>
+        <li class="fragment">Replaces Gulp, mostly</li>
+      </ul>
+    </li>
+    <li class="fragment">
+      More module bundlers
+      <ul>
+        <li>Parcel</li>
+        <li>Rollup</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section data-auto-animate>
+  <h4>Towards Modern Web Development</h4>
+  <div class="split">
+    <ul>
+      <li>
+        EcmaScript 2015 (ES6)
+        <ul>
+          <li class="fragment" data-fragment-index="1">
+            <code>import</code> and <code>export</code>
+          </li>
+          <li class="fragment" data-fragment-index="2">
+            <code>const</code> and <code>let</code>
+          </li>
+          <li class="fragment" data-fragment-index="3">
+            <code>Set</code> and <code>Map</code>
+          </li>
+          <li class="fragment" data-fragment-index="4">
+            Arrow functions
+          </li>
+          <li class="fragment" data-fragment-index="5">
+            <code>Promises</code>
+          </li>
+        </ul>
+      </li>
+      <li class="fragment" data-fragment-index="6">
+        EcmaScript 2015+ (ES6+)
+        <ul>
+          <li class="fragment" data-fragment-index="7">
+            <code>async-await</code>
+          </li>
+          <li class="fragment" data-fragment-index="8">
+            Spread operator (<code>...</code>)
+          </li>
+          <li class="fragment" data-fragment-index="9">
+            Optional chaining operator (<code>?.</code>)
+          </li>
+          <li class="fragment" data-fragment-index="10">
+            Nullish coalescing operator (<code>?:</code>)
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="r-stack" style="font-size: 16px">
+      <div class="fragment current-visible" data-fragment-index="1">
+        <pre><code data-trim>
+          import Default from 'package-name';
+          import { Named } from './relative/path';
+
+          export var exportedVariable = true;
+
+          export default function () {
+            return true;
+          };
+        </code></pre>
+      </div>
+      <div class="fragment current-visible" data-fragment-index="2">
+        <pre><code class="language-js" data-trim>
+          const constantValue = true;
+
+          let mutableValue = true;
+        </code></pre>
+      </div>
+      <div class="fragment current-visible" data-fragment-index="3">
+        <pre><code class="language-js" data-trim>
+          const set = new Set([1, 2, 3]);
+          set.add(4);
+          const hasTwo = set.has(2);
+
+          new Map([
+            ['firstKey', 'firstValue'],
+            ['secondKey', 'secondValue']
+          ]);
+        </code></pre>
+      </div>
+      <div class="fragment current-visible" data-fragment-index="4">
+        <pre><code data-trim>
+          const longArrowFunction = () => {
+            return true;
+          }
+
+          const shortArrowFunction = () => true;
+        </code></pre>
+      </div>
+      <div class="fragment current-visible" data-fragment-index="5">
+        <div>
+          <pre><code class="language-js" data-trim>
+            asyncOperation()
+              .then(successCallback)
+              .catch(failureCallback);
+
+            function successCallback(result) {
+              alert('Result: ' + result);
+            }
+
+            function failureCallback(error) {
+              alert('Error: ' + error);
+            }
+          </code></pre>
+        </div>
+        <div style="margin-top: 12px">
+          <pre><code class="language-js" data-trim>
+            asyncOperation()
+              .then(() => alert('Result: ' + result))
+              .catch(() => alert('Error: ' + error));
+          </code></pre>
+        </div>
+      </div>
+      <div class="fragment current-visible" data-fragment-index="7">
+        <pre><code class="language-js" data-trim>
+          async function () {
+            try {
+              const result = asyncOperation()
+              alert('Result: ' + result);
+            } catch (error) {
+              alert('Error: ' + error);
+            }
+          }
+        </code></pre>
+      </div>
+      <div class="fragment current-visible" data-fragment-index="8">
+        <div>
+          <pre><code data-trim>
+            const numbers = [1, 2, 3];
+            const fruits = ['apple', 'orange', 'banana'];
+
+            const arrayCombination = [...numbers, ...fruits];
+          </code></pre>
+        </div>
+        <div style="margin-top: 12px">
+          <pre><code data-trim>
+            const en2No = {
+              'Hello': 'Hei',
+              'Norwegian': 'Norsk'
+            }
+            const en2Fr = {
+              'Hello': 'Salut',
+              'French': 'Français(e)'
+            }
+
+            const objectCombination = { ...en2No, ...en2Fr };
+          </code></pre>
+        </div>
+      </div>
+      <div class="fragment current-visible" data-fragment-index="9">
+        <pre><code class="language-js" data-trim>
+          const result = maybeNullValue?.property || defaultValue;
+        </code></pre>
+      </div>
+      <div class="fragment current-visible" data-fragment-index="10">
+        <pre><code class="language-js" data-trim>
+          const result = maybeNullValue?.property ?: defaultValue;
+        </code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+<section data-auto-animate>
+  <h4>Towards Modern Web Development</h4>
+  <ul>
+    <li>
+      Babel
+      <ul>
+        <li class="fragment">ES6+ transpiler</li>
+        <li class="fragment">Target older browsers</li>
+        <li class="fragment">Use new features without waiting</li>
+      </ul>
+    </li>
+    <li class="fragment">
+      TypeScript
+      <ul>
+        <li class="fragment">JavaScript with types</li>
+        <li class="fragment">Static type-checker</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section data-auto-animate>
+  <h4>Towards Modern Web Development</h4>
+  <p>Basically where we are today</p>
+</section>

@@ -1,0 +1,67 @@
+<section>
+	<h4>Task 10: Change data to live in server</h4>
+	<div class="split">
+		<div>
+			<p class="fragment" style="text-align: left">Change your app to:</p>
+			<ol>
+				<li class="fragment">
+					Fetch colleagues from the server to populate the list
+				</li>
+				<li class="fragment">
+					Submit new colleagues to the server
+				</li>
+				<li class="fragment">
+					Submit changes to existing colleagues to the server
+				</li>
+				<li class="fragment">
+					Delete colleagues from the server
+				</li>
+				<li class="fragment">
+					Always stay up-to-date with the information on the server
+				</li>
+			</ol>
+		</div>
+		<div style="max-width: 35%">
+			<aside class="fragment info">
+				<h5>Tip #1</h5>
+				<p>
+					<a href="https://reactjs.org/docs/hooks-effect.html" rel="noreferrer" target="_blank">
+						useEffect
+					</a>
+					with an <em>empty</em> dependency list mimicks the
+					<a href="https://reactjs.org/docs/react-component.html#componentdidmount" rel="noreferrer" target="_blank">
+						componentDidMount
+					</a>
+					life-cycle method.
+				</p>
+			</aside>
+		</div>
+	</div>
+</section>
+
+<section>
+	<h5>Nice to know</h5>
+	<ul>
+		<li class="fragment">
+			<a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch" rel="noreferrer"
+				target="_blank">
+				fetch
+			</a> as an in-built function (ES6+)
+			<ul>
+				<li class="fragment">Sends an HTTP request</li>
+				<li class="fragment">Wrapper around <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest"
+						rel="noreferrer" target="_blank">
+						XMLHttpRequest
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li class="fragment">
+			HTTP requests are expensive
+			<ul>
+				<li class="fragment">Avoid unnecessary requests</li>
+				<li class="fragment">Correct usage of dependency lists</li>
+			</ul>
+		</li>
+	</ul>
+</section>

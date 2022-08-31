@@ -1,0 +1,234 @@
+<section data-auto-animate>
+  <h4>Hooks</h4>
+  <ul style="font-size: 0.9em">
+    <li class="fragment" data-fragment-index="1">
+      Re-usable cross-cutting functionality
+      <ul>
+        <li class="fragment" data-fragment-index="2">Component agnostic logic</li>
+      </ul>
+    </li>
+    <li class="fragment" data-fragment-index="3">
+      React provides a set of primitive hooks
+      <dl style="font-size: 0.7em; column-count: 2; column-gap: 32px;">
+        <dt class="fragment" data-fragment-index="4"><code>useState</code></dt>
+        <dd class="fragment" data-fragment-index="4">component-local state</dd>
+        <dt class="fragment" data-fragment-index="5"><code>useEffect</code></dt>
+        <dd class="fragment" data-fragment-index="5">side-effects (imperative code)</dd>
+        <dt class="fragment" data-fragment-index="6"><code>useMemo</code></dt>
+        <dd class="fragment" data-fragment-index="6">memoization of primary values</dd>
+        <dt class="fragment" data-fragment-index="7"><code>useCallback</code></dt>
+        <dd class="fragment" data-fragment-index="7">memoization of functions</dd>
+        <dt class="fragment" data-fragment-index="8"><code>useContext</code></dt>
+        <dd class="fragment" data-fragment-index="8">shared state (Context API)</dd>
+        <dt class="fragment" data-fragment-index="9">
+          and more
+        </dt>
+        <dd class="fragment" data-fragment-index="9">
+          <a href="https://reactjs.org/docs/hooks-reference.html" rel="noreferrer" target="_blank">
+            see React hooks reference
+          </a>
+        </dd>
+      </dl>
+    </li>
+    <li class="fragment">
+      User- and library-defined hooks are called <em>custom hooks</em>
+      <ul>
+        <li class="fragment">Defined as a function</li>
+        <li class="fragment">Compose one or more hooks</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section data-auto-animate>
+  <h4>Hooks</h4>
+  <ul style="font-size: 0.9em">
+    <li>
+      <div class="split" style="font-size: 1em">
+        <div>
+          Typically expects a dependency list
+          <ul>
+            <li class="fragment">Re-runs when list values change</li>
+          </ul>
+        </div>
+        <div>
+          <pre><code data-trim data-line-numbers="6|4-7">
+						<script type="text/template">
+              import React, { useEffect } from 'react';
+
+              function Popup({ msg }) {
+                useEffect(() => {
+                  alert(msg);
+                }, [msg]);
+                return null;
+              }
+						</script>
+					</code></pre>
+        </div>
+      </div>
+    </li class="fragment">
+    <li class="fragment">
+      Must follow a strict set of rules:
+      <ol style="column-count: 2">
+        <li class="fragment">
+          Don't use hooks inside of:
+          <ul>
+            <li class="fragment">loops</li>
+            <li class="fragment">conditional branches</li>
+            <li class="fragment">nested functions</li>
+          </ul>
+        </li class="fragment">
+        <li class="fragment">
+          Only use hooks in:
+          <ul>
+            <li class="fragment"><i>function</i> components</li>
+            <li class="fragment">custom hooks</li>
+          </ul>
+        </li class="fragment">
+      </ol>
+    </li class="fragment">
+  </ul>
+</section>
+<section data-auto-animate>
+  <h4>Hooks</h4>
+  <ul style="font-size: 0.9em">
+    <li class="fragment">
+      Makes <i>class</i> components obsolete
+      <ul>
+        <li class="fragment">Manage state</li>
+        <li class="fragment">Mimick life-cycle methods</li>
+      </ul>
+    </li class="fragment">
+  </ul>
+</section>
+<section data-auto-animate>
+  <h4>Hooks</h4>
+  <div class="split" style="margin-top: 12px">
+    <div>
+      <pre data-id="a"><code data-trim data-line-numbers="|1|4,13|6-8,14|7|8|">
+				<script type="text/template">
+          import React, { useState, useCallback } from 'react';
+
+          function Example() {
+            const [count, setCount] = useState(0);
+            
+            const handleClick = useCallback(() => {
+              setCount(count + 1)
+            }, [count, setCount]);
+            
+            return (
+              <main>
+                <h1>Counter</h1>
+                <p>You have clicked {count} times.</p>
+                <button onClick={handleClick}>
+                  Click me
+                </button>
+              </main>
+            );
+          }
+				</script>
+			</code></pre>
+    </div>
+    <div class="fragment">
+      <pre data-id="class-code"><code data-trim data-line-numbers="|4-13,16|6,16|9-13,21|9|">
+				<script type="text/template">
+          import React, { Component } from 'react';
+
+          class Example extends Component {
+            constructor(props) {
+              super(props);
+              this.state = { count: 0 };
+            }
+            
+            handleClick = () => {
+              this.setState(({ count }) => ({
+                count: count + 1
+              }));
+            }
+            
+            render() {
+              const { count } = this.state;
+              return (
+                <main>
+                  <h1>Counter</h1>
+                  <p>You have clicked {count} times.</p>
+                  <button onClick={this.handleClick}>
+                    Click me
+                  </button>
+                </main>
+              );
+            }
+          }
+				</script>
+			</code></pre>
+    </div>
+  </div>
+</section>
+<section data-auto-animate>
+  <h4>Hooks</h4>
+  <div class="split" style="margin-top: 12px">
+    <div>
+      <pre data-id="a"><code data-trim data-line-numbers>
+				<script type="text/template">
+          import React, { useState, useCallback } from 'react';
+
+          function Example() {
+            const [count, setCount] = useState(0);
+            
+            const handleClick = useCallback(() => {
+              setCount(count + 1)
+            }, [count, setCount]);
+            
+            return (
+              <main>
+                <h1>Counter</h1>
+                <p>You have clicked {count} times.</p>
+                <button onClick={handleClick}>
+                  Click me
+                </button>
+              </main>
+            );
+          }
+				</script>
+			</code></pre>
+    </div>
+    <div>
+      <pre data-id="class-code"><code data-trim data-line-numbers="|7,10">
+				<script type="text/template">
+          import React, { Component } from 'react';
+
+          class Example extends Component {
+            constructor(props) {
+              super(props);
+              this.state = { count: 0 };
+              this.handleClick.bind(this);
+            }
+            
+            handleClick() {
+              this.setState(({ count }) => ({
+                count: count + 1
+              }));
+            }
+            
+            render() {
+              const { count } = this.state;
+              return (
+                <main>
+                  <h1>Counter</h1>
+                  <p>You have clicked {count} times.</p>
+                  <button onClick={this.handleClick}>
+                    Click me
+                  </button>
+                </main>
+              );
+            }
+          }
+				</script>
+			</code></pre>
+    </div>
+  </div>
+  <p class="fragment">
+    <a href="dist/examples/react/hooks.html" rel="noreferrer" target="_blank">
+      See it in action
+    </a>
+  </p>
+</section>

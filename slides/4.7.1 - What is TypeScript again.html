@@ -1,0 +1,93 @@
+<section data-auto-animate>
+  <h4>What is TypeScript again?</h4>
+  <div class="split">
+    <ul>
+      <li class="fragment" data-fragment-index="1">
+        JavaScript with static types
+        <ul>
+          <li class="fragment" data-fragment-index="2">
+            Type annotations
+          </li>
+          <li class="fragment" data-fragment-index="4">
+            Compiled into plain JavaScript
+          </li>
+        </ul>
+      </li>
+      <li class="fragment" data-fragment-index="5">
+        Features:
+        <ul>
+          <li class="fragment" data-fragment-index="6">Enums</li>
+          <li class="fragment" data-fragment-index="7">Interfaces</li>
+          <li class="fragment" data-fragment-index="8">Type aliases</li>
+          <li class="fragment" data-fragment-index="10">
+            <a href="https://www.typescriptlang.org/docs/handbook/intro.html" rel="noreferrer" target="_blank">
+              and much more
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="fragment">
+        Always enable <code>strict</code> mode
+        <ul>
+          <li class="fragment">Null-safety</li>
+          <li class="fragment">Otherwise 💣💥</li>
+        </ul>
+      </li>
+      <li class="fragment">Developed by Microsoft</li>
+    </ul>
+    <div>
+      <div class="fragment" data-fragment-index="2">
+        <pre><code class="language-ts" data-trim>
+          const greeting: string = 'Hello, World!';
+        </code></pre>
+      </div>
+      <div class="fragment" data-fragment-index="3">
+        <pre><code class="language-ts" data-trim>
+          function greet(name: string): string {
+            return 'Hello, ' + name + '!';
+          }
+        </code></pre>
+      </div>
+      <div class="fragment" data-fragment-index="6" style="margin-top: 24px">
+        <pre><code data-trim>
+          enum Example {
+            FOO,
+            BAR
+          }
+        </code></pre>
+      </div>
+      <div class="fragment" data-fragment-index="7" style="margin-top: 24px">
+        <pre><code class="language-ts" data-trim>
+          interface Animal {
+            makeSound(): string;
+          }
+        </code></pre>
+      </div>
+      <div class="r-stack">
+        <div class="fragment" data-fragment-index="8" style="margin-top: 24px">
+          <pre data-id="type-alias"><code class="language-ts" data-trim>
+            type Grade = 'A' | 'B' | 'C' | 'D' | 'E' | 'F';
+
+            type Student = {
+              name: string;
+            }
+          </code></pre>
+        </div>
+        <div class="fragment" data-fragment-index="9" style="margin-top: 24px">
+          <pre data-id="type-alias"><code class="language-ts" data-trim>
+            type Grade = 'A' | 'B' | 'C' | 'D' | 'E' | 'F';
+
+            type Student = {
+              name: string;
+              courses: Array&lt;{
+                id: number;
+                date: Date;
+                grade: Grade;
+              }&gt;
+            }
+          </code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

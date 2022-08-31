@@ -1,0 +1,57 @@
+<section>
+	<h4>Task 7: Adding a delete feature</h4>
+	<div class="split" style="font-size: 1em">
+		<article class="fragment info">
+			<h5>Motivation</h5>
+			<p style="display: flex; flex-direction: column">
+				<span>
+					<q>Oh no! I accidentally included a typo and now there's no way to delete the entry</q>
+					😭
+				</span>
+				<span style="align-self: flex-end">- A panicking user</span>
+			</p>
+
+			<h5>Goal</h5>
+			<p>Implement a mechanism that allows users to delete list entries.</p>
+		</article>
+		<aside class="fragment info" style="font-size: 0.4em; max-width: 30%">
+			<h5>Tip #1</h5>
+			<p>You <em>can</em> use index to identify which entry to delete.</p>
+			<h5>Tip #2</h5>
+			<p>
+				The first parameter of the
+				<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+					rel="noreferrer" target="_blank">
+					map
+				</a>
+				function will be executed with the current element's index as its second
+				argument.
+			</p>
+			<h5>Tip #3</h5>
+			<p>React nodes, or JSX, are valid array elements and object values.</p>
+		</aside>
+	</div>
+</section>
+
+<section>
+	<h5>Share and discuss your solution with your colleagues</h5>
+</section>
+
+<section>
+	<h5>Nice to know</h5>
+	<ul>
+		<li class="fragment">
+			Entries could be removed by doing a <em>page refresh</em> ⟳
+			<ul>
+				<li class="fragment">Data is stored in memory</li>
+				<li class="fragment">
+					Will clear all data!
+					<ul>
+						<li class="fragment">Not good UX</li>
+						<li class="fragment">Users will cuss at you 🤬</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</section>

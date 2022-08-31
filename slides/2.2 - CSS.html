@@ -1,0 +1,82 @@
+<section>
+  <h3>CSS</h3>
+  <div class="split">
+    <ul>
+      <li class="fragment" data-fragment-index="1">
+        <em>Cascading Style Sheets</em>
+      </li>
+      <li class="fragment" data-fragment-index="2">
+        Visual presentation of HTML
+        <ul>
+          <li class="fragment" data-fragment-index="3" data-cue-code-lines="5-7">Rules</li>
+          <li class="fragment" data-fragment-index="4" data-cue-code-lines="5">
+            <a href="https://www.w3schools.com/cssref/css_selectors.asp">
+              Selectors
+            </a>
+          </li>
+          <li class="fragment" data-fragment-index="5" data-cue-code-lines="6">Declarations</li>
+        </ul>
+      </li>
+      <li class="fragment" data-fragment-index="6" data-cue-code-lines="_">
+        Linked to HTML in two ways:
+        <ul>
+          <li class="fragment" data-fragment-index="7">
+            by referance:
+            <ul>
+              <li class="fragment" data-fragment-index="8" data-cue-code-lines="3">
+                <code>&lt;link&gt;</code> element
+              </li>
+              <li class="fragment" data-cue-code-lines="11">
+                <code>class</code> attribute
+              </li>
+            </ul>
+          </li>
+          <li class="fragment" data-cue-code-lines="_">
+            by value (inline CSS):
+            <ul>
+              <li class="fragment" data-cue-code-lines="4-8">
+                <code>&lt;style&gt;</code> element
+              </li>
+              <li class="fragment" data-cue-code-lines="12"><code>style</code> attribute</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="fragment" data-fragment-index="3">
+      <pre><code data-trim data-line-numbers>
+        <script type="text/template">
+          <html>
+            <head>
+              <link rel="stylesheet" href="stylesheet.css">
+              <style>
+                .heading {
+                  color: red;
+                }
+              </style>
+            </head>
+            <body>
+              <h1 class="heading">This is a heading</h1>
+              <p style="color: red">This a paragraph</p>
+            </body>
+          </html>
+        </script>
+      </code></pre>
+      <p class="fragment" style="margin-bottom: 0" --data-fragment-index="13">
+        See it in action:
+        <ul>
+          <li>
+            <a href="dist/examples/css/css-example.html" rel="noreferrer" target="_blank">
+              HTML file
+            </a>
+          </li>
+          <li>
+            <a href="dist/examples/css/css-example.html" rel="noreferrer" target="_blank">
+              CSS file
+            </a>
+          </li>
+        </ul>
+      </p>
+    </div>
+  </div>
+</section>

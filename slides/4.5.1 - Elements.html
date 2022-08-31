@@ -1,0 +1,66 @@
+<section>
+  <h4>Elements</h4>
+  <div class="split">
+    <ul>
+      <li class="fragment" data-fragment-index="1">Atomic building blocks</li>
+      <li class="fragment" data-fragment-index="2">Represents HTML elements</li>
+      <li class="fragment" data-fragment-index="3" data-cue-code-lines="3">
+        Instantiated using <code>React.createElement</code>
+        <ul>
+          <li class="fragment" data-fragment-index="4" data-cue-code-lines="4">
+            1st parameter: HTML element name
+          </li>
+          <li class="fragment" data-fragment-index="5" data-cue-code-lines="5-8">
+            2nd parameter: object of HTML element attributes
+            <ul>
+              <li class="fragment" data-fragment-index="6" data-cue-code-lines="7">
+                <code>children</code> is an attribute in React
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="fragment" data-fragment-index="7">
+        JSX is syntactic sugar for instantiation
+        <ul>
+          <li class="fragment">Attribute in camelCase (not lowercase)</li>
+          <li class="fragment">Attribute can accept any JS value</li>
+          <li class="fragment">Attribute are called <em>props</em> instead</li>
+        </ul>
+      </li>
+    </ul>
+    <div>
+      <div class="fragment" data-fragment-index="3">
+        <pre><code class="language-js" data-trim data-line-numbers>
+          import React from 'react';
+
+          const elem = React.createElement(
+            'h1',
+            {
+              styles: { color: 'red' },
+              children: ['This is a heading']
+            }
+          );
+        </code></pre>
+      </div>
+      <div class="fragment" data-fragment-index="7" data-cue-code-lines="3-9" style="margin-top: 24px">
+        <pre><code class="language-jsx" data-trim data-line-numbers="3-8">
+          <script type="text/template">
+            import React from 'react';
+
+            const elem = (
+              <h1 style={{ color: 'red' }}>
+                This is a heading
+              </h1>
+            );
+          </script>
+        </code></pre>
+      </div>
+      <p class="fragment">
+        <a href="dist/examples/react/creating-elements.html" rel="noreferrer" target="_blank">
+          See it in action
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
