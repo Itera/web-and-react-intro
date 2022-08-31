@@ -1,0 +1,197 @@
+<section>
+  <h4>Components</h4>
+  <div class="split">
+    <ul>
+      <li class="fragment" data-fragment-index="1">
+        User- or library-defined building blocks
+      </li>
+      <li class="fragment" data-fragment-index="2">
+        Defined as a <i>function</i> or <i>class</i>
+        <ul>
+          <li class="fragment" data-fragment-index="3">
+            <i>Function</i> components must return a <em>single</em>
+            <code>React.ReactNode</code>
+          </li>
+          <li class="fragment" data-fragment-index="4">
+            <i>Class</i> components must extend the abstract
+            <code>React.Component</code> class
+            <ul>
+              <li class="fragment" data-fragment-index="5">
+                Requires a <code>render</code> method that returns a
+                <em>single</em> <code>React.ReactNode</code>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="fragment" data-fragment-index="6">
+        Appears in JSX with PascalCase names
+      </li>
+    </ul>
+    <div>
+      <aside class="fragment info" data-fragment-index="3">
+        <h5>Definition</h5>
+        <p>A <code>React.ReactNode</code> is either:</p>
+        <ul>
+          <li>a component</li>
+          <li>an element</li>
+          <li>a primary value</li>
+          <li>a null value</li>
+          <li>a <code>React.Fragment</code></li>
+        </ul>
+        <p>
+          A <code>React.Fragment</code> a container that will not be added to
+          the DOM
+        </p>
+      </aside>
+      <div class="fragment" data-fragment-index="6" style="margin-top: 58px">
+        <pre><code data-trim>
+          <script type="text/template">
+            <ShoppingList items={['orange']} />
+          </script>
+        </code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>Components</h4>
+  <div class="split">
+    <div>
+      <ul>
+        <li>
+          Parameterized through props
+          <ul>
+            <li class="fragment" data-fragment-index="1">
+              <i>Function</i> components reads props from the 1st parameter
+            </li>
+            <li class="fragment" data-fragment-index="2">
+              <i>Class</i> components reads props from a field variable
+            </li>
+            <li class="fragment" data-fragment-index="3">Used to pass data downwards</li>
+          </ul>
+        </li>
+        <li class="fragment" data-fragment-index="4">
+          Callbacks propagate data upwards
+          <ul>
+            <li class="fragment" data-fragment-index="5">Usually passed down as prop</li>
+            <li class="fragment" data-fragment-index="6">Typically a part of event handling</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="r-stack" style="margin-top: 24px">
+        <div class="split fragment" data-fragment-index="3" style="background-color: white; width: 80%">
+          <div>
+            <img src="./img/Downwards data flow.svg"></img>
+          </div>
+          <div class="fragment" data-fragment-index="4">
+            <img src="./img/Upwards data flow (callbacks only).svg"></img>
+          </div>
+        </div>
+        <div class="fragment" data-fragment-index="5" style="background-color: white; width: 80%">
+          <img src="./img/Upwards data flow.svg"></img>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="fragment" data-fragment-index="1">
+        <pre><code class="language-jsx" data-trim data-line-numbers="3-5">
+          <script type="text/template">
+            import React from 'react';
+
+            function Example(props) {
+              return <h1>{props.heading}</h1>;
+            }
+          </script>
+        </code></pre>
+      </div>
+      <div class="fragment" data-fragment-index="2" style="margin-top: 24px">
+        <pre><code class="language-jsx" data-trim data-line-numbers="5">
+          <script type="text/template">
+            import React from 'react';
+
+            class Example extends React.Component {
+              render() {
+                return <h1>{this.props.heading}</h1>;
+              }
+            }
+          </script>
+        </code></pre>
+      </div>
+      <div class="fragment" data-fragment-index="6" style="margin-top: 24px">
+        <pre><code class="language-jsx" data-trim data-line-numbers="4-6,10">
+          <script type="text/template">
+            import React from 'react';
+
+            function Example(props) {
+              const handleHeadingChange = () => {
+                props.onHeadingChanged('New Heading');
+              };
+              return (
+                <div>
+                  <h1>{props.heading}</h1>
+                  <button onClick={handleHeadingChange}>
+                    Change heading
+                  </button>
+                </div>
+              );
+            }
+          </script>
+        </code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h4>Components</h4>
+  <div class="split">
+    <ul>
+      <li>
+        <i>Class</i> components may implement life-cycle methods
+        <ul>
+          <li class="fragment" data-cue-code-lines="4-6">componentDidMount</li>
+          <li class="fragment" data-cue-code-lines="8-10">componentDidUpdate</li>
+          <li class="fragment" data-cue-code-lines="12-14">componentWillUnmount</li>
+          <li class="fragment" data-cue-code-lines="_">
+            <a href="https://reactjs.org/docs/react-component.html#the-component-lifecycle" rel="noreferrer"
+              target="_blank">
+              and plenty more
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div>
+      <pre><code class="language-jsx" data-trim data-line-numbers>
+        <script type="text/template">
+          import React from 'react';
+
+          class Example extends React.Component {
+            componentDidMount() {
+              console.log('First render complete!');
+            }
+
+            componentDidUpdate() {
+              console.log('Consecutive render complete!');
+            }
+
+            componentWillUnmount() {
+              console.log('Bye bye!');
+            }
+
+            render() {
+              return <h1>{this.props.heading}</h1>
+            }
+          }
+        </script>
+      </code></pre>
+      <p class="fragment">
+        <a href="dist/examples/react/components.html" rel="noreferrer" target="_blank">
+          See it in action
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
