@@ -9,7 +9,7 @@
     "start:nowatch": "parcel ./src/index.html",
     "gen:diagrams": "rm -rf ./static/img && plantuml ./src/diagrams/*.puml -tsvg -o ../../static/img",
     "build": "parcel build ./src/index.html --public-url .",
-    "server": "node ./local-server.js"
+    "server": "node ./src/local-server.js"
   },
   "contributors": [
     {
@@ -33,7 +33,9 @@
     "web"
   ],
   "dependencies": {
+    "@fastify/cors": "^8.2.0",
     "canvas-confetti": "^1.5.1",
+    "fastify": "^4.12.0",
     "reveal.js": "^4.3.1"
   },
   "devDependencies": {

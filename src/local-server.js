@@ -2,7 +2,7 @@ const fastify = require("fastify")({
   logger: true,
 });
 
-fastify.register(require("fastify-cors", { origin: true }));
+fastify.register(require("@fastify/cors"), { origin: true });
 
 const colleagueList = [
   {
@@ -75,7 +75,7 @@ fastify.delete("/colleagues/:id", (req, res) => {
   res.send(colleague);
 });
 
-fastify.listen(4000, (err, address) => {
+fastify.listen({port: 4000}, (err, address) => {
   if (err) {
     throw err;
   }
