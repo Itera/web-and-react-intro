@@ -9,7 +9,9 @@
     "start:nowatch": "parcel ./src/index.html",
     "gen:diagrams": "rm -rf ./static/img && plantuml ./src/diagrams/*.puml -tsvg -o ../../static/img",
     "build": "parcel build ./src/index.html --public-url .",
-    "server": "node ./src/local-server.js"
+    "server": "node ./src/local-server.js",
+    "test": "playwright test",
+    "test:report": "playwright show-report"
   },
   "contributors": [
     {
@@ -40,6 +42,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.7.0",
+    "@playwright/test": "^1.30.0",
     "nodemon": "^2.0.15",
     "parcel": "^2.3.2",
     "parcel-reporter-static-files-copy": "^1.3.4"
