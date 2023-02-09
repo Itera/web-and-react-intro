@@ -46,7 +46,6 @@ fastify.post("/colleagues", (req, res) => {
 
   const id = runningId++;
   const newColleague = { ...colleague, id };
-  console.log("newColleague", newColleague);
   colleagueList.push(newColleague);
   res.send(newColleague);
 });
