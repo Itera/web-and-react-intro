@@ -32,10 +32,6 @@ function setupConfetti() {
       setTimeout(() => {
         throwConfetti({
           origin: { x: 0.5, y: 1.5 },
-          particleCount: 200,
-          spread: 90,
-          startVelocity: 200,
-          ticks: 300,
         });
       }, 300);
     }
